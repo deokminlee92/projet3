@@ -285,28 +285,8 @@
             background-color: white;
             cursor: pointer;
         }
-        
-        .restaurant-containeur__btn{
-            position: absolute;
-            width: 15%;
-            font-size: 17px;
-            font-weight: bold;
-            color: #237c66;
-            margin-top: 3%;
-            margin-left: 68%;
-            justify-content: center;
-            padding: 7px 7px;
-            border-radius: 3px 3px 3px 3px;
-        }
 
-        .restaurant-containeur__image {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            object-fit: cover;
-        }
-    /*
-        .nouveau_card {
+        .restaurant-containeur__btn{
             position: absolute;
             width: fit-content;
             margin: 0.7rem;
@@ -314,8 +294,18 @@
             color: green;
             font-weight: bold;
             padding: 6px 10px;
-            border-radius: 3px; }
-    */
+            border-radius: 3px; 
+        }
+
+
+        .restaurant-containeur__image {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            object-fit: cover;
+        }
+
+
 
         .restaurant-containeur__img{
             width: 100%; 
@@ -544,27 +534,51 @@
                     height: 25%;
                     margin: 2% 0;
                 }
+
+                    .Restaurant-page__card__btn{
+                        display: flex;
+                        position: absolute;
+                        float: right;
+                        justify-content: center;
+                        align-items: center;
+                        border: none;
+                        border-radius: 0 25% 25% 0;
+                        width: 80px;
+                        height:80px;
+                        top: 9.5%;
+                        left: 80%;
+                        background-color: #99E2D0;
+                    }
+
+                    .Restaurant-page__card__btn span{
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50% 50% 50% 50%;
+                        background-color: white;
+                    }
                     .Restaurant-page__card h2{
                         margin-top: 2%;
                         padding-left: 3%;
                         font-size: 20px;
                     }
     
-                    .Restaurant-page__card__detail{
-                        justify-content: space-between;
-                        margin-top: -6%;
-                        padding-left: 3%;
-                    }
-                    
-                        .Restaurant-page__card__detail p{
-                            font-size: 19px;
+                        .Restaurant-page__card__detail{
+                            justify-content: space-between;
+                            margin-top: -6%;
+                            padding-left: 3%;
                         }
-                        .prix{
-                            margin-right: 3%;
-                            color: black;
-                            font-weight: bold;
-                            
-                        }
+
+                        
+                            .Restaurant-page__card__detail p{
+                                font-size: 19px;
+                            }
+                            .prix{
+                                margin-right: 3%;
+                                color: black;
+                                font-weight: bold;
+                                
+                            }
     
     
     /*BÙTTON*/
