@@ -583,14 +583,14 @@ p{
                 font-size: 20px;
             }
 
-                .restaurant-page__card__detail{
+                .restaurant-page__card__prix{
                     justify-content: space-between;
                     margin-top: -25px;
                     padding-left: 3%;
                 }
 
                 
-                    .restaurant-page__card__detail p{
+                    .restaurant-page__card__prix p{
                         font-size: 19px;
                     }
                     .prix{
@@ -1407,14 +1407,14 @@ p{
                 font-size: 20px;
             }
 
-                .restaurant-page__card__detail{
+                .restaurant-page__card__prix{
                     justify-content: space-between;
                     margin-top: -25px;
                     padding-left: 3%;
                 }
 
                 
-                    .restaurant-page__card__detail p{
+                    .restaurant-page__card__prix p{
                         font-size: 19px;
                     }
                     .prix{
@@ -1813,10 +1813,14 @@ p{
 
 
 
-                                    /*PAGE restaurantS*/
 
 
-/*MEDIA QUERY Mobile*/
+
+
+
+/*PAGE restaurants*/
+
+
 
     /*LOGO*/
         
@@ -1911,78 +1915,143 @@ p{
                 font-style: italic;
             }
 
-            .far{
-                font-size: 0px;
-            }
-
-    .restaurant-page__carte__titre{
+    .restaurant-page__titre{
         margin-left: 3%;
     }
 
-    .restaurant-page__carte__titre::after{
-        display: block;
-        content: "";
-        width: 50px;
-        margin-top: -15px;
 
-        
+/* Animation Coeur */
+
+    .restaurant-page__heart i{
+        position: absolute;
     }
+
+        .restaurant-page__heart .fa-regular{
+            position: relative;
+        }
+
+        .restaurant-page__heart .fa-solid{
+            display: block;
+            content: "";
+            width: 50px;
+            margin-top: -32px;
+            color: transparent;
+            background-image: -webkit-gradient(linear, right top, left bottom, from(#9356DC), to(#FF79DA));
+            background-image: linear-gradient(to bottom top, #9356DC, #FF79DA);
+            background-clip: text;
+            -webkit-background-clip: text;
+            opacity: 0;
+            -webkit-transition: 600ms;
+            transition: 500ms;
+        }
+            .restaurant-page__heart .fa-solid:active{
+                opacity:1;
+            }
+                .restaurant-page__heart .fa-solid:hover{
+                    opacity:1;
+                }
+
+
+/* Restaurant carte */
+
         .restaurant-page__container{
             width: 100%;
             justify-content: center;
         }
 
         .restaurant-page__card{
+            display: flex;
+            justify-content: space-between;
             background-color: white;
+            position: relative;
+            overflow: hidden;
+            animation: animation-card 500ms both;
             width: 90%;
             height: 25%;
             margin: 1% 0;
+            box-shadow: 1px 2px 8px #c1c1c1;
         }
 
-            .restaurant-page__card__btn{
-                display: flex;
-                position: absolute;
-                float: right;
-                justify-content: center;
-                align-items: center;
-                border: none;
-                border-radius: 0 25% 25% 0;
-                width: 80px;
-                height:80px;
-                top: 9.5%;
-                left: 80%;
-                background-color: #99E2D0;
+            .restaurant-page__card__description{
+                margin: 10px 0;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 100%;
             }
 
-            .restaurant-page__card__btn span{
-                display: inline-block;
-                width: 50px;
-                height: 50px;
-                border-radius: 50% 50% 50% 50%;
-                background-color: white;
-            }
             .restaurant-page__card h2{
+                width: 100%;
                 margin-top: 2%;
                 padding-left: 3%;
                 font-size: 20px;
             }
+            .restaurant-page__card p{
+                font-size: 19px;
+                padding-left: 3%;
+                margin-top: -10px;
+                width: 100%;
+            }
 
-                .restaurant-page__card__detail{
-                    justify-content: space-between;
-                    margin-top: -25px;
-                    padding-left: 3%;
+            .restaurant-page__card__prix{
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                margin-top: 45px;
+                margin-right: 20px;
+            }
+
+                .restaurant-page__card__prix p{
+                    margin-bottom: 15px;
                 }
 
+                .restaurant-page__card__btn{
+                    display: flex;
+                    position: absolute;
+                    height: 90px;
+                    width: 80px;
+                    background-color: #99E2D0;
+                    right: 0px;
+                    top: 0px;
+                    transform: translateX(100px);
+                    transition: transform 300ms ease-out;
+
+                }
+                .restaurant-page__card__prix {
+                    transition: all 300ms ease-out;
+                    display: block;
+                    padding-left: 10px;
+                }
+                .restaurant-page__card:hover .restaurant-page__card__prix {
+                    transform: translateX(-80px);
+                    padding-left: 90px;
+                }
+                .restaurant-page__card:hover .check {
+                    animation: check-rotate 300ms both alternate ease;
+                }
+                .restaurant-page__card:hover .restaurant-page__card__btn {
+                    transform: translateX(0px);
+                }
                 
-                    .restaurant-page__card__detail p{
-                        font-size: 19px;
+                .check {
+                    position: absolute;
+                    font-size: 35px;
+                    top: 27px;
+                    left: 23px;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    -webkit-text-stroke-width: 2px;
+                    -webkit-text-stroke-color: #99E2D0;
+                    background-color: white;
+                }
+                
+                @keyframes check-rotate {
+                    0% {
+                        transform: rotate(0deg);
                     }
-                    .prix{
-                        margin-right: 3%;
-                        color: black;
-                        font-weight: bold;
-                        
+                    100% {
+                        transform: rotate(360deg);
                     }
+                }
 
 
 /*BÙTTON*/
@@ -2012,22 +2081,24 @@ p{
 /*Footer*/
 
 .Footer{
-    height: 250px;
+    height: 200px;
     padding-left: 20px;
-    padding-top: 5px;
 }
     
-    .Footer-titre{
+    .Footer h3{
         padding: 2% 0%;
-        margin: 0 0 ;
+        margin: 1% 0;
+        font-family: 'shrikhand';
         font-style: italic;
-        font-weight: bold;
     }
 
-    .BackgroundBlack p{
-        margin-left: 15px;
+    .Footer__list__icon .fa-utensils{
+        margin-right: 2px;
     }
-
+    .DisplayFlexend .fa-handshake-angle{
+        font-size: 11px;
+        margin-right: 2px;
+    }
 
     .Footer__list p{
         margin: 3px;
