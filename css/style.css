@@ -250,7 +250,7 @@ main{
             flex-direction: column;
             align-items: center;
             background-color: rgb(238, 238, 238);
-            padding: 5% 0;
+            padding: 2% 0;
         }
         
             .explorer-menu__titre{
@@ -271,7 +271,7 @@ main{
                 }
         
             .explorer__btn{
-                width: 40%;
+                width: 20%;
                 height: 60px;
                 padding: 0 20px;
                 font-size: 1.2em;
@@ -294,17 +294,17 @@ main{
         /*Fonctionnement*/
         
         .fonctionnement{
-            margin: 8% 0;
+            margin: 2% 0;
         }
         
             .fonctionnement h2{
-                margin-top: 10%;
+                margin-top: 2%;
                 margin-left: 5%;
             }
         
             .fonctionnement-containeur{
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 align-items: center;
                 justify-content: space-around;
                 
@@ -313,7 +313,7 @@ main{
                     display: flex;
                     justify-content: left;
                     align-items: center;
-                    width: 90%;
+                    width: 30%;
                     height: 70px;
                     background-color:  rgb(246, 246, 246);
                     margin: 3% 0;
@@ -488,6 +488,8 @@ main{
         }
             
             .Footer h3{
+                display: flex;
+                justify-content: center;
                 margin: 2% 0;
                 font-family: 'shrikhand';
                 font-style: italic;
@@ -500,7 +502,14 @@ main{
                 font-size: 11px;
                 margin-right: 2px;
             }
-        
+            
+            .Footer__list{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
             .Footer__list p{
                 margin: 3px;
                 color: white;
@@ -514,6 +523,7 @@ main{
     
     
     
+
     
     
     
@@ -597,31 +607,38 @@ main{
             object-fit: cover;
         }
     
+
     /*A La FRANCAIS */
     
-        .restaurant-page{
+        .menu{
             position: relative;
             margin-top: -20%;
             height: 100%;
         }
-            .restaurant-page__titre{
+            .menu__titre{
                 align-items: center;
                 justify-content: space-between;
                 margin: 0 7%;
             }
-                .restaurant-page__titre h1{
+                .menu__titre h1{
                     font-family: 'shrikhand';
                     font-style: italic;
                 }
     
-        .restaurant-page__carte__titre{
+        .menu__Box{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu__carte__titre{
             margin-left: 3%;
         }
     
-            .restaurant-page__carte p{
+            .menu__carte p{
                 margin-bottom: 5px;
             }
-            .restaurant-page__carte__titre::after{
+            .menu__carte__titre::after{
                 content: "";
                 border-bottom: 3px solid #99E2D0;
                 width: 30px;
@@ -633,15 +650,15 @@ main{
     
     /* Animation Coeur */
     
-        .restaurant-page__heart i{
+        .menu__heart i{
             position: absolute;
         }
     
-            .restaurant-page__heart .fa-regular{
+            .menu__heart .fa-regular{
                 position: relative;
             }
     
-            .restaurant-page__heart .fa-solid{
+            .menu__heart .fa-solid{
                 display: block;
                 content: "";
                 width: 50px;
@@ -655,65 +672,79 @@ main{
                 -webkit-transition: 600ms;
                 transition: 500ms;
             }
-                .restaurant-page__heart .fa-solid:active{
+                .menu__heart .fa-solid:active{
                     opacity:1;
                 }
-                    .restaurant-page__heart .fa-solid:hover{
+                    .menu__heart .fa-solid:hover{
                         opacity:1;
                     }
     
     
     /* Restaurant carte */
     
-            .restaurant-page__container1, .restaurant-page__container2, .restaurant-page__container3 {
+            .menu__container1, .menu__container2, .menu__container3 {
                 width: 100%;
                 justify-content: center;
-                animation: animation-card 500ms ;
-                animation-delay: 0.5s;
+                animation: animation-card 500ms both;
                 animation-duration: 2s;
             }
+                .menu__container1{
+                    animation-delay: 50ms;
+                }
+                
+                .menu__container2{
+                    animation-delay: 300ms;
+                }
+                .menu__container3{
+                    animation-delay: 500ms;
+                }
+
+            
                     /* Menu Drop animation  */
     
     
                     @keyframes animation-card {
                         0%{
-                            transform: translateY(20px);
+                            transform: translateY(10px);
                             opacity: 0;
                             background: white;
                         }
-                        50%{
-                            transform: translateY(10px);
-                            opacity: 0.5;
-                            background: white;
-                        }
+
                         100%{
                             transform: translateY(0px);
                             opacity: 1;
                         }
                     }
     
-            .restaurant-page__card{
+
+            
+
+            .menu__carte{
+                margin: 0 2%;
+            }
+
+            .menu__card{
                 display: flex;
                 justify-content: space-between;
                 background-color: white;
                 position: relative;
                 overflow: hidden;
-                width: 90%;
+                width: 100%;
                 height: 25%;
                 margin: 1% 0;
                 box-shadow: 1px 2px 8px #c1c1c1;
             }
     
     
-                .restaurant-page__card__description{
-                    margin: 10px 0;
+                .menu__card__description{
+                    margin: 12px 0;
                     overflow: hidden;
                     white-space: nowrap;
                     width: 100%;
                     height: 100%;
                 }
     
-                .restaurant-page__card h2{
+                .menu__card h2{
                     width: 90%;
                     margin-top: 1%;
                     padding-left: 3%;
@@ -721,7 +752,7 @@ main{
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
-                .restaurant-page__card p{
+                .menu__card p{
                     font-size: 19px;
                     padding-left: 3%;
                     margin-top: -10px;
@@ -730,8 +761,10 @@ main{
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
+
+
     
-                .restaurant-page__card__prix{
+                .menu__card__prix{
                     display: flex;
                     justify-content: center;
                     align-items: flex-end;
@@ -739,12 +772,12 @@ main{
                     margin-right: 20px;
                 }
     
-                    .restaurant-page__card__prix p{
+                    .menu__card__prix p{
                         margin-bottom: 15px;
-                        font-weight: bold;
+                        color: black;
                     }
     
-                    .restaurant-page__card__btn{
+                    .menu__card__btn{
                         display: flex;
                         position: absolute;
                         height: 90px;
@@ -756,26 +789,26 @@ main{
                         transition: transform 300ms ease-out;
     
                     }
-                    .restaurant-page__card__prix {
+                    .menu__card__prix {
                         transition: all 300ms ease-out;
                         display: block;
                         padding-left: 10px;
                     }
-                    .restaurant-page__card:hover .restaurant-page__card__prix {
+                    .menu__card:hover .menu__card__prix {
                         transform: translateX(-80px);
                         padding-left: 90px;
                     }
-                    .restaurant-page__card:hover .check {
+                    .menu__card:hover .check {
                         animation: check-rotate 300ms both alternate ease;
                     }
-                    .restaurant-page__card:hover .restaurant-page__card__btn {
+                    .menu__card:hover .menu__card__btn {
                         transform: translateX(0px);
                     }
                     
                     .check {
                         position: absolute;
                         font-size: 35px;
-                        top: 20px;
+                        top: 13px;
                         left: 23px;
                         -webkit-background-clip: text;
                         color: transparent;
@@ -809,7 +842,7 @@ main{
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 40%;
+        width: 15%;
         height: 60px;
         padding: 0 20px;
         font-size: 1.2em;
@@ -832,12 +865,15 @@ main{
     
     /*Footer*/
     
+    
     .Footer{
         height: 200px;
         padding-left: 20px;
         padding-top: 3px;
     }
-        
+        .Footer-titre.colorwhite{
+            margin-bottom: 10px;
+        }
         .Footer h3{
             margin: 2% 0;
             font-family: 'shrikhand';
@@ -1173,7 +1209,9 @@ p{
         padding-left: 20px;
         padding-top: 3px;
     }
-        
+        .Footer-titre.colorwhite{
+            margin-bottom: 10px;
+        }
         .Footer h3{
             margin: 2% 0;
             font-family: 'shrikhand';
@@ -1286,29 +1324,29 @@ p{
 
 /*A La FRANCAIS */
 
-    .restaurant-page{
+    .menu{
         position: relative;
         margin-top: -20%;
         height: 100%;
     }
-        .restaurant-page__titre{
+        .menu__titre{
             align-items: center;
             justify-content: space-between;
             margin: 0 7%;
         }
-            .restaurant-page__titre h1{
+            .menu__titre h1{
                 font-family: 'shrikhand';
                 font-style: italic;
             }
 
-    .restaurant-page__carte__titre{
+    .menu__carte__titre{
         margin-left: 3%;
     }
 
-        .restaurant-page__carte p{
+        .menu__carte p{
             margin-bottom: 5px;
         }
-        .restaurant-page__carte__titre::after{
+        .menu__carte__titre::after{
             content: "";
             border-bottom: 3px solid #99E2D0;
             width: 30px;
@@ -1320,15 +1358,15 @@ p{
 
 /* Animation Coeur */
 
-    .restaurant-page__heart i{
+    .menu__heart i{
         position: absolute;
     }
 
-        .restaurant-page__heart .fa-regular{
+        .menu__heart .fa-regular{
             position: relative;
         }
 
-        .restaurant-page__heart .fa-solid{
+        .menu__heart .fa-solid{
             display: block;
             content: "";
             width: 50px;
@@ -1342,17 +1380,17 @@ p{
             -webkit-transition: 600ms;
             transition: 500ms;
         }
-            .restaurant-page__heart .fa-solid:active{
+            .menu__heart .fa-solid:active{
                 opacity:1;
             }
-                .restaurant-page__heart .fa-solid:hover{
+                .menu__heart .fa-solid:hover{
                     opacity:1;
                 }
 
 
 /* Restaurant carte */
 
-        .restaurant-page__container1, .restaurant-page__container2, .restaurant-page__container3 {
+        .menu__container1, .menu__container2, .menu__container3 {
             width: 100%;
             justify-content: center;
             animation: animation-card 500ms ;
@@ -1379,7 +1417,7 @@ p{
                     }
                 }
 
-        .restaurant-page__card{
+        .menu__card{
             display: flex;
             justify-content: space-between;
             background-color: white;
@@ -1392,7 +1430,7 @@ p{
         }
 
 
-            .restaurant-page__card__description{
+            .menu__card__description{
                 margin: 10px 0;
                 overflow: hidden;
                 white-space: nowrap;
@@ -1400,7 +1438,7 @@ p{
                 height: 100%;
             }
 
-            .restaurant-page__card h2{
+            .menu__card h2{
                 width: 90%;
                 margin-top: 1%;
                 padding-left: 3%;
@@ -1408,7 +1446,7 @@ p{
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
-            .restaurant-page__card p{
+            .menu__card p{
                 font-size: 19px;
                 padding-left: 3%;
                 margin-top: -10px;
@@ -1418,7 +1456,7 @@ p{
                 text-overflow: ellipsis;
             }
 
-            .restaurant-page__card__prix{
+            .menu__card__prix{
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
@@ -1426,12 +1464,13 @@ p{
                 margin-right: 20px;
             }
 
-                .restaurant-page__card__prix p{
+                .menu__card__prix p{
                     margin-bottom: 15px;
                     font-weight: bold;
+                    color: black;
                 }
 
-                .restaurant-page__card__btn{
+                .menu__card__btn{
                     display: flex;
                     position: absolute;
                     height: 90px;
@@ -1443,19 +1482,19 @@ p{
                     transition: transform 300ms ease-out;
 
                 }
-                .restaurant-page__card__prix {
+                .menu__card__prix {
                     transition: all 300ms ease-out;
                     display: block;
                     padding-left: 10px;
                 }
-                .restaurant-page__card:hover .restaurant-page__card__prix {
+                .menu__card:hover .menu__card__prix {
                     transform: translateX(-80px);
                     padding-left: 90px;
                 }
-                .restaurant-page__card:hover .check {
+                .menu__card:hover .check {
                     animation: check-rotate 300ms both alternate ease;
                 }
-                .restaurant-page__card:hover .restaurant-page__card__btn {
+                .menu__card:hover .menu__card__btn {
                     transform: translateX(0px);
                 }
                 
@@ -1975,29 +2014,29 @@ p{
 
 /*A La FRANCAIS */
 
-    .restaurant-page{
+    .menu{
         position: relative;
         margin-top: -20%;
         height: 100%;
     }
-        .restaurant-page__titre{
+        .menu__titre{
             align-items: center;
             justify-content: space-between;
             margin: 0 7%;
         }
-            .restaurant-page__titre h1{
+            .menu__titre h1{
                 font-family: 'shrikhand';
                 font-style: italic;
             }
 
-    .restaurant-page__carte__titre{
+    .menu__carte__titre{
         margin-left: 3%;
     }
 
-        .restaurant-page__carte p{
+        .menu__carte p{
             margin-bottom: 5px;
         }
-        .restaurant-page__carte__titre::after{
+        .menu__carte__titre::after{
             content: "";
             border-bottom: 3px solid #99E2D0;
             width: 30px;
@@ -2009,15 +2048,15 @@ p{
 
 /* Animation Coeur */
 
-    .restaurant-page__heart i{
+    .menu__heart i{
         position: absolute;
     }
 
-        .restaurant-page__heart .fa-regular{
+        .menu__heart .fa-regular{
             position: relative;
         }
 
-        .restaurant-page__heart .fa-solid{
+        .menu__heart .fa-solid{
             display: block;
             content: "";
             width: 50px;
@@ -2031,17 +2070,17 @@ p{
             -webkit-transition: 600ms;
             transition: 500ms;
         }
-            .restaurant-page__heart .fa-solid:active{
+            .menu__heart .fa-solid:active{
                 opacity:1;
             }
-                .restaurant-page__heart .fa-solid:hover{
+                .menu__heart .fa-solid:hover{
                     opacity:1;
                 }
 
 
 /* Restaurant carte */
 
-        .restaurant-page__container1, .restaurant-page__container2, .restaurant-page__container3 {
+        .menu__container1, .menu__container2, .menu__container3 {
             width: 100%;
             justify-content: center;
             animation: animation-card 500ms ;
@@ -2068,7 +2107,7 @@ p{
                     }
                 }
 
-        .restaurant-page__card{
+        .menu__card{
             display: flex;
             justify-content: space-between;
             background-color: white;
@@ -2081,7 +2120,7 @@ p{
         }
 
 
-            .restaurant-page__card__description{
+            .menu__card__description{
                 margin: 10px 0;
                 overflow: hidden;
                 white-space: nowrap;
@@ -2089,7 +2128,7 @@ p{
                 height: 100%;
             }
 
-            .restaurant-page__card h2{
+            .menu__card h2{
                 width: 90%;
                 margin-top: 1%;
                 padding-left: 3%;
@@ -2097,7 +2136,7 @@ p{
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
-            .restaurant-page__card p{
+            .menu__card p{
                 font-size: 19px;
                 padding-left: 3%;
                 margin-top: -10px;
@@ -2107,7 +2146,7 @@ p{
                 text-overflow: ellipsis;
             }
 
-            .restaurant-page__card__prix{
+            .menu__card__prix{
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
@@ -2115,12 +2154,12 @@ p{
                 margin-right: 20px;
             }
 
-                .restaurant-page__card__prix p{
+                .menu__card__prix p{
                     margin-bottom: 15px;
                     font-weight: bold;
                 }
 
-                .restaurant-page__card__btn{
+                .menu__card__btn{
                     display: flex;
                     position: absolute;
                     height: 90px;
@@ -2132,19 +2171,19 @@ p{
                     transition: transform 300ms ease-out;
 
                 }
-                .restaurant-page__card__prix {
+                .menu__card__prix {
                     transition: all 300ms ease-out;
                     display: block;
                     padding-left: 10px;
                 }
-                .restaurant-page__card:hover .restaurant-page__card__prix {
+                .menu__card:hover .menu__card__prix {
                     transform: translateX(-80px);
                     padding-left: 90px;
                 }
-                .restaurant-page__card:hover .check {
+                .menu__card:hover .check {
                     animation: check-rotate 300ms both alternate ease;
                 }
-                .restaurant-page__card:hover .restaurant-page__card__btn {
+                .menu__card:hover .menu__card__btn {
                     transform: translateX(0px);
                 }
                 
