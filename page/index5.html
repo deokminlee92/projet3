@@ -9,64 +9,93 @@
         <script src="https://kit.fontawesome.com/db2893de79.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
-        <title>ohmyfood</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap" rel="stylesheet">
+        <title>Le délice des sens</title>
     </head>
 
 
+
+
+    <body>
+
+    <!-- Spinner Loader -->
+    
+    <div class="chargement"> </div>
+
     <!--OHMYFOOD-->
-    <header class="header-logo customFlex">
+    <header class="header-logo">
         <div class="header-logo__btn customFlex"></div>
             <ul class="header-logo__arrow">
-                <li><a href="#pagedaccueil" class="header-logo__arrow__btn"><span></span></a></li>
+                <li><a href="index.html" class="header-logo__arrow__btn"><span></span></a></li>
             </ul>
         <h1 class="headerlogo__text">ohmyfood</h1>
     </header>
 
-        <section class="header-backgroundphoto">
-            <img class="header-backgroundphoto__img" src="../img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="img" />
-        </section>
+    <!-- IMAGE -->
+    <section class="header-backgroundphoto">
+        <img class="header-backgroundphoto__img" src="../img/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="img" />
+    </section>
 
-<!--A la française -->
 
-    <body>
-        <section class="Restaurant-page backgroundgray2 customBoderRadius">
-            <div class="Restaurant-page__titre customFlex">
+    <!--A la française -->
+
+        <section class="menu backgroundgray2 customBoderRadius">
+            <div class="menu__titre customFlex">
                 <h1>Le délice des sens</h1>
-                <i class="far fa-heart fa-2x"></i>
+                <div class="menu__heart">  
+                    <i class="fa-regular fa-heart fa-2x "></i>
+                    <i class="fa-solid fa-heart fa-2x "></i>
+                </div>
             </div>
 
 
             <!--ENTREE-->
 
-            
-        <div class="Restaurant-page__carte">
-            <div class="Restaurant-page__carte__titre">
+    <div class="menu__Box">
+        <div class="menu__carte">
+            <div class="menu__carte__titre">
                 <p>ENTREES</p>
             </div>
-            <div class="Restaurant-page__entrees customBoderRadius customFlexCenter">
-                <div class="Restaurant-page__container customFlexColumn">
-                    <div class="Restaurant-page__card customBoderRadius">
-                        <h2>Tarte au thon</h2>
-                            <div class="Restaurant-page__card__detail customFlex">
-                                <p class="card__detail">Assaisonné au yuzu</p>
-                                <p class="prix">25€</p>
-                            </div>
+            <div class="menu__choix customBoderRadius customFlexCenter">
+                <div class="menu__container1 customFlexColumn">
+                    <div class="menu__card customBoderRadius">
+                        <div class="menu__card__description">
+                            <h2>Tartare de thon</h2>
+                            <p>Assaisonné au yuzu</p>
+                        </div>
+                        <div class="menu__card__prix customFlex">
+                            <p>25€</p>
+                        </div>
+                        <div class="menu__card__btn">
+                            <i class="fa-solid fa-circle-check check"></i>
+                        </div>
                     </div>
-                    <div class="Restaurant-page__card customBoderRadius">
-                        <h2>Bouché de homard croustillant</h2>
-                            <div class="Restaurant-page__card__detail customFlex">
-                                <p class="card__detail">Et sa farandole de petits légumes</p>
-                                <p class="prix">35€</p>
-                            </div>
+
+                    <div class="menu__card customBoderRadius">
+                        <div class="menu__card__description">
+                            <h2>Bouchée de homard croustillant</h2>
+                            <p>Et sa farandole de petits légumes</p>
+                        </div>
+                        <div class="menu__card__prix customFlex">
+                            <p>35€</p>
+                        </div>
+                        <div class="menu__card__btn">
+                            <i class="fa-solid fa-circle-check check"></i>
+                        </div>
                     </div>
-                    <div class="Restaurant-page__card customBoderRadius">
-                        <h2>Velouté de cèpes</h2>
-                            <div class="Restaurant-page__card__detail customFlex">
-                                <p class="card__detail">Au truffes</p>
-                                <p class="prix">20€</p>
-                            </div>
-                    </div>    
+
+                    <div class="menu__card customBoderRadius">
+                        <div class="menu__card__description">
+                            <h2>Velouté de cèpes </h2>
+                            <p>Aux truffes</p>
+                        </div>
+                        <div class="menu__card__prix customFlex">
+                            <p>20€</p>
+                        </div>
+                        <div class="menu__card__btn">
+                            <i class="fa-solid fa-circle-check check"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,91 +104,125 @@
         <!--PLAT-->
 
 
-        <div class="Restaurant-page__carte ">
-            <div class="Restaurant-page__carte__titre">
+        <div class="menu__carte">
+            <div class="menu__carte__titre">
                 <p>PLATS</p>
             </div>
-            <div class="Restaurant-page__entrees customBoderRadius customFlexCenter">
-                <div class="Restaurant-page__container customFlexColumn">
-                    <div class="Restaurant-page__card customBoderRadius">
-                        <h2>Poulet rôti aux herbes de provence</h2>
-                            <div class="Restaurant-page__card__detail customFlex">
-                                <p class="card__detail">Et sa crème de truffe</p>
-                                <p class="prix">40€</p>
-                            </div>
+            <div class="menu__choix customBoderRadius customFlexCenter">
+                <div class="menu__container2 customFlexColumn">
+                    <div class="menu__card customBoderRadius">
+                        <div class="menu__card__description">
+                            <h2>Poulet rôti aux herbes de Provence </h2>
+                            <p>Et sa crème de truffe</p>
+                        </div>
+                        <div class="menu__card__prix customFlex">
+                            <p>40€</p>
+                        </div>
+                        <div class="menu__card__btn">
+                            <i class="fa-solid fa-circle-check check"></i>
+                        </div>
                     </div>
-                    <div class="Restaurant-page__card customBoderRadius">
-                        <h2>Langouste rôtie</h2>
-                            <div class="Restaurant-page__card__detail customFlex">
-                                <p class="card__detail">Et ses légumes de saison</p>
-                                <p class="prix">35€</p>
-                            </div>
+
+                    <div class="menu__card customBoderRadius">
+                        <div class="menu__card__description">
+                            <h2>Langouste rôtie </h2>
+                            <p>Et ses légumes de saison</p>
+                        </div>
+                        <div class="menu__card__prix customFlex">
+                            <p>35€</p>
+                        </div>
+                        <div class="menu__card__btn">
+                            <i class="fa-solid fa-circle-check check"></i>
+                        </div>
                     </div>
-                    <div class="Restaurant-page__card customBoderRadius">
-                        <h2>Côte de boeuf angus</h2>
-                            <div class="Restaurant-page__card__detail customFlex">
-                                <p class="card__detail">Et sa purée de panais</p>
-                                <p class="prix">44€</p>
-                            </div>
-                    </div>    
+
+                    <div class="menu__card customBoderRadius">
+                        <div class="menu__card__description">
+                            <h2>Côte de boeuf Angus </h2>
+                            <p>Et sa purée de panais</p>
+                        </div>
+                        <div class="menu__card__prix customFlex">
+                            <p>44€</p>
+                        </div>
+                        <div class="menu__card__btn">
+                            <i class="fa-solid fa-circle-check check"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
+    
 
     <!--DESSERT-->
 
-        <div class="Restaurant-page__carte ">
-            <div class="Restaurant-page__carte__titre">
+        <div class="menu__carte ">
+            <div class="menu__carte__titre">
                 <p>DESSERTS</p>
             </div>
-            <div class="Restaurant-page__entrees customBoderRadius customFlexCenter">
-                <div class="Restaurant-page__container customFlexColumn">
-                    <div class="Restaurant-page__card customBoderRadius">
-                        <h2>Farandole de desserts</h2>
-                            <div class="Restaurant-page__card__detail customFlex">
-                                <p class="card__detail">du chef</p>
-                                <p class="prix">18€</p>
-                            </div>
+            <div class="menu__choix customBoderRadius customFlexCenter">
+                <div class="menu__container3 customFlexColumn">
+                    <div class="menu__card customBoderRadius">
+                        <div class="menu__card__description">
+                            <h2>Farandole de desserts</h2>
+                            <p>Du chef</p>
+                        </div>  
+                        <div class="menu__card__prix customFlex">
+                            <p>18€</p>
+                        </div>
+                        <div class="menu__card__btn">
+                            <i class="fa-solid fa-circle-check check"></i>
+                        </div>
                     </div>
-                    <div class="Restaurant-page__card customBoderRadius">
-                        <h2>Crème brûlée</h2>
-                            <div class="Restaurant-page__card__detail customFlex">
-                                <p class="card__detail">Revisité</p>
-                                <p class="prix">22€</p>
-                            </div>
+
+                    <div class="menu__card customBoderRadius">
+                        <div class="menu__card__description">
+                            <h2>Crème brulée </h2>
+                            <p>Revisité</p>
+                        </div>
+                        <div class="menu__card__prix customFlex">
+                            <p>22€</p>
+                        </div>
+                        <div class="menu__card__btn">
+                            <i class="fa-solid fa-circle-check check"></i>
+                        </div>
                     </div>
-                    <div class="Restaurant-page__card customBoderRadius">
-                        <h2>Tiramisu</h2>
-                            <div class="Restaurant-page__card__detail customFlex">
-                                <p class="card__detail">A la noisette</p>
-                                <p class="prix">23€</p>
-                            </div>
-                    </div>    
+
+                    <div class="menu__card customBoderRadius">
+                        <div class="menu__card__description">
+                            <h2>Tiramisu</h2>
+                            <p>À la noisette</p>
+                        </div>
+                        <div class="menu__card__prix customFlex">
+                            <p>23€</p>
+                        </div>
+                        <div class="menu__card__btn">
+                            <i class="fa-solid fa-circle-check check"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
+    </div>
 
     <!--BUTTON-->
-        <section class="explorer-page">
-            <button class="explorer-page__btn">Commander</button>
-        </section>
-
-
+        <div class="explorer-page">
+            <div class="explorer-page__btn">Commander</div>
+        </div>
+    
+    </section>
 <!--FOOTER-->
 
-        <footer class="Footer BackgroundBlack">
-            <h1 class="footer__titre colorwhite">Ohmyfood</h1>
-                <section class="Footer__list">
-                    <div class="Footer__list__icon DisplayFlexend"><i class="fa-solid fa-utensils" style="color:white"></i>
-                    <p>Proposer un restaurant</p></div>
-                    <div class="DisplayFlexend"><i class="fa-solid fa-handshake-angle"style="color:white"></i>
-                    <p>Devenir partenaire</p></div>
-                    <p>Mentions légales</p>
-                    <p><a href="mailto:" class="footer__list__email">Contact</a></p>
-                </section>
+    <footer class="Footer BackgroundBlack">
+        <h3 class="Footer-titre colorwhite">Ohmyfood</h3>
+            <section class="Footer__list">
+                <div class="Footer__list__icon DisplayFlexend"><i class="fa-solid fa-utensils" style="color:white"></i>
+                <p>Proposer un restaurant</p></div>
+                <div class="DisplayFlexend"><i class="fa-solid fa-handshake-angle" style="color:white"></i>
+                <p>Devenir partenaire</p></div>
+                <p>Mentions légales</p>
+                <p><a href="mailto:" class="footer__list__email">Contact</a></p>
+            </section>
 
-        </footer>
+    </footer>
     </body>
 </html>
