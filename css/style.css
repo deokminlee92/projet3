@@ -642,6 +642,7 @@ body{
                     align-items: center;
                     justify-content: space-between;
                     margin: 0 7%;
+
                 }
                     .menu__titre h2{
                         font-size: 26px;
@@ -654,6 +655,7 @@ body{
                 flex-direction: row;
                 justify-content: space-around;
                 align-items: center;
+
             }
             
 
@@ -746,7 +748,7 @@ body{
                     position: relative;
                     overflow: hidden;
                     white-space: nowrap;
-                    width: 100%;
+                    width: 400px;
                     height: 28%;
                     margin: 5% 0;
                     box-shadow: 1px 2px 8px #c1c1c1;
@@ -853,7 +855,7 @@ body{
             display: flex;
             justify-content:center ;
             align-items: center;
-            margin: 100px 0;
+            margin-top: 50px;
         }
         
         .explorer-page__btn{
@@ -2023,6 +2025,7 @@ p{
     .header-backgroundphoto__img{
         width: 100%;
         object-fit: cover;
+        height: 300px;
     }
 
 /*A La FRANCAIS */
@@ -2045,6 +2048,7 @@ p{
 
     .menu__carte__titre{
         margin-left: 3%;
+        margin: 4%;
     }
 
         .menu__carte p{
@@ -2163,12 +2167,12 @@ p{
                 width: 90%;
                 margin-top: 1%;
                 padding-left: 3%;
-                font-size: 20px;
+                font-size: 18px;
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
             .menu__card p{
-                font-size: 19px;
+                font-size: 16px;
                 padding-left: 3%;
                 margin-top: -10px;
                 width: 100%;
@@ -2188,6 +2192,7 @@ p{
                 .menu__card__prix p{
                     margin-bottom: 15px;
                     font-weight: bold;
+                    color: black;
                 }
 
                 .menu__card__btn{
